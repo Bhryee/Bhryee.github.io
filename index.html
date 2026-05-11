@@ -1211,18 +1211,77 @@ function ProjectCard({ p, lang, idx }) {
 }
 
 function Technologies({ lang }) {
+  const groups = [
+    {
+      title: lang === 'tr' ? 'Diller' : 'Languages',
+      items: [
+        { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+        { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg' },
+        { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' },
+      ],
+    },
+    {
+      title: lang === 'tr' ? 'Kütüphaneler & Frameworkler' : 'Libraries & Frameworks',
+      items: [
+        { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg' },
+        { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" },
+        { name: 'FastAPI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg' },
+        { name: "Prisma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg" },
+        { name: "OpenCV",  icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" },
+        { name: 'NumPy', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg' },
+        { name: 'Pandas', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg' },
+        { name: 'Matplotlib', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg' },
+        { name: 'Seaborn', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+        { name: 'TensorFlow', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg' },
+        { name: 'PyTorch', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg' },
+      ],
+    },
+    {
+      title: lang === 'tr' ? 'Teknolojiler' : 'Technologies',
+      items: [
+        { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+        { name: 'Docker Compose', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+        { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
+        { name: "Unreal Engine",icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" },
+        { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+        { name: "RabbitMQ", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg" },
+
+
+
+      ],
+    },
+    {
+      title: lang === 'tr' ? 'Temeller' : 'Foundations',
+      items: [
+        { name: 'Artificial Intelligence (AI)', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg' },
+        { name: 'Data Science', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg' },
+        { name: 'Machine Learning', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+        { name: 'Deep Learning', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg' },
+        { name: 'NLP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+        { name: 'Computer Vision', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg' },
+      ],
+    },
+  ];
+
   return (
     <section className="block reveal" id="technologies">
       <div className="wrap">
         <SectionHead num="05" title={lang === 'tr' ? 'Teknolojiler' : 'Technologies'} />
-        <div className="tech-grid">
-          {D.technologies.map((t) => (
-            <div className="tech-item" key={t.name}>
-              <img src={t.icon} alt={t.name} loading="lazy" />
-              <span className="tech-name">{t.name}</span>
+        {groups.map((group) => (
+          <div key={group.title} style={{ marginBottom: '24px' }}>
+            <h3 className="section-title" style={{ fontSize: '18px', marginBottom: '12px' }}>
+              {group.title}
+            </h3>
+            <div className="tech-grid">
+              {group.items.map((t) => (
+                <div className="tech-item" key={t.name}>
+                  <img src={t.icon} alt={t.name} loading="lazy" />
+                  <span className="tech-name">{t.name}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
