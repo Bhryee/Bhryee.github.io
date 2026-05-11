@@ -1210,10 +1210,10 @@ function ProjectCard({ p, lang, idx }) {
   );
 }
 
-function Technologies({ lang }) {
+function Technical Skills({ lang }) {
   const groups = [
     {
-      title: lang === 'tr' ? 'Diller' : 'Languages',
+      title: lang === 'tr' ? 'Programlama Dilleri' : 'Languages',
       items: [
         { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
         { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg' },
@@ -1237,7 +1237,7 @@ function Technologies({ lang }) {
       ],
     },
     {
-      title: lang === 'tr' ? 'Teknolojiler' : 'Technologies',
+      title: lang === 'tr' ? 'Teknik Beceriler' : 'Technical Skills',
       items: [
         { name: 'Docker', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
         { name: 'Docker Compose', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
@@ -1250,23 +1250,12 @@ function Technologies({ lang }) {
 
       ],
     },
-    {
-      title: lang === 'tr' ? 'Temeller' : 'Foundations',
-      items: [
-        { name: 'Artificial Intelligence (AI)', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg' },
-        { name: 'Data Science', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg' },
-        { name: 'Machine Learning', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
-        { name: 'Deep Learning', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg' },
-        { name: 'NLP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
-        { name: 'Computer Vision', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg' },
-      ],
-    },
   ];
 
   return (
     <section className="block reveal" id="technologies">
       <div className="wrap">
-        <SectionHead num="05" title={lang === 'tr' ? 'Teknolojiler' : 'Technologies'} />
+        <SectionHead num="05" title={lang === 'tr' ? 'Teknik Beceriler' : 'Technical Skills'} />
         {groups.map((group) => (
           <div key={group.title} style={{ marginBottom: '24px' }}>
             <h3 className="section-title" style={{ fontSize: '18px', marginBottom: '12px' }}>
@@ -1449,7 +1438,7 @@ function App() {
     { id: 'education',  label: { tr: 'Eğitim',   en: 'Education' } },
     { id: 'experience', label: { tr: 'Deneyim',  en: 'Experience' } },
     { id: 'volunteer',      label: { tr: 'Gönüllü',      en: 'Volunteer' } },
-    { id: 'technologies',  label: { tr: 'Teknolojiler', en: 'Technologies' } },
+    { id: 'technologies',  label: { tr: 'Teknik Beceriler', en: 'Technical Skills' } },
     { id: 'projects',      label: { tr: 'Projeler',     en: 'Projects' } },
     { id: 'articles',      label: { tr: 'Makaleler',    en: 'Articles' } },
   ];
@@ -1487,7 +1476,7 @@ function App() {
       <Education lang={lang} />
       <Experience lang={lang} />
       <Volunteer lang={lang} />
-      <Technologies lang={lang} />
+      <Technical Skills lang={lang} />
       <Projects lang={lang} />
       <Articles lang={lang} />
       <Foot lang={lang} />
