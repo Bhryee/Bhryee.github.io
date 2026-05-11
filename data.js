@@ -71,7 +71,7 @@ window.PORTFOLIO_DATA = {
           "Meliora şirketinin top ile etkileşimli çalışan VOLBOL ürünü için 'Kelebek Oyunu' ve 'Türkiye Kültür ve Coğrafya Oyunu' adlı iki oyunu Unreal Engine teknolojisi ile geliştirdim.",
         ],
         en: [
-          "Developed two interactive games 'Butterfly' and 'Turkish Culture and Geography' in Unreal Engine for VOLBOL, Meliora's ball-interactive gaming platform.",,
+          "Developed two interactive games 'Butterfly' and 'Turkish Culture and Geography' in Unreal Engine for VOLBOL, Meliora's ball-interactive gaming platform.",
         ],
       },
     },
