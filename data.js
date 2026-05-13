@@ -68,10 +68,10 @@ window.PORTFOLIO_DATA = {
       stack: ["Python", "Unreal Engine"],
       bullets: {
         tr: [
-          "Meliora şirketinin fiziksel top etkileşimine dayalı olarak çalışan VOLBOL ürünü için 'Kelebek Oyunu' ve 'Türkiye Kültür ve Coğrafya Oyunu' adlı iki oyunu Unreal Engine teknolojisi ile geliştirdim.",
+          "Meliora şirketinin fiziksel top etkileşimine dayalı olarak çalışan VOLBOL ürünü için 'Köstebek Oyunu' ve 'Türkiye Kültür ve Coğrafya Oyunu' adlı iki oyunu Unreal Engine teknolojisi ile geliştirdim.",
         ],
         en: [
-          "Developed two interactive games 'Butterfly' and 'Turkish Culture and Geography' in Unreal Engine for VOLBOL, Meliora's ball-interactive gaming platform.",
+          "Developed two interactive games 'Mole Game' and 'Turkish Culture and Geography' in Unreal Engine for VOLBOL, Meliora's ball-interactive gaming platform.",
         ],
       },
     },
